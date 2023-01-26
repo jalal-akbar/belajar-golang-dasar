@@ -8,7 +8,6 @@ import (
 
 type sample struct {
 	Name string `required:"true" max:"10"` //Struct Tag
-	Age  int
 }
 
 func isValid(data interface{}) bool {
@@ -29,12 +28,10 @@ func isValid(data interface{}) bool {
 func TestReflect(t *testing.T) {
 	samples := sample{
 		Name: "Jalal",
-		Age:  26,
 	}
 	sampleType := reflect.TypeOf(samples)
 	// Field
 	fmt.Println("Sample Field for Name : ", sampleType.Field(0).Name)
-	fmt.Println("Sample Field for Age : ", sampleType.Field(1).Name)
 	// structTag
 	fmt.Println("required : ", sampleType.Field(0).Tag.Get("required"))
 	fmt.Println("max : ", sampleType.Field(0).Tag.Get("max"))
