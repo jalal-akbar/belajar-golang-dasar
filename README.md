@@ -1,7 +1,7 @@
 # belajar-golang-dasar
 
 ## Content
-- [Packages] (#package)
+- [Package](#package)
 
 # package
 - (1) Initilization
